@@ -314,6 +314,7 @@ Full Table of Contents
 
 .. toctree::
    :numbered:
+   :maxdepth: 3
 
    setup
    help
