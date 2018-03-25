@@ -30,15 +30,18 @@ CPython is developed using `git <https://git-scm.com>`_ for version control. The
 command line program is named ``git``; this is also used to refer to git
 itself. git is easily available for all common operating systems.
 
-- **Install:** As the CPython repo is hosted on GitHub, please refer to either the
+- **Install** 
+
+  As the CPython repo is hosted on GitHub, please refer to either the
   `GitHub setup instructions <https://help.github.com/articles/set-up-git/>`_
   or the `git project instructions <https://git-scm.com>`_ for step-by-step
   installation directions. You may also want to consider a graphical client
   such as `TortoiseGit <https://tortoisegit.org/>`_ or
   `GitHub Desktop <https://desktop.github.com/>`_.
 
-- **Configure:** Once you installed Git, you should configure
-  :ref:`your name and email <set-up-name-email>` and create 
+- **Configure** 
+
+  Configure :ref:`your name and email <set-up-name-email>` and create 
   `an SSH key <https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/>`_
   as this will allow you to interact with GitHub without typing a username
   and password each time you execute a command, such as ``git pull``,
