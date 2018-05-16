@@ -1500,10 +1500,14 @@ emulate :command:`make` as closely as possible.
 See also :file:`Doc/README.rst` for more information.
 
 
-Without make
-------------
+Using sphinx-build
+------------------
 
-Install the Sphinx and blurb packages from PyPI.
+Using ``sphinx-build`` is useful in some cases where using command line
+options such as ``verbosity`` and ``nit-picky`` will give you greater insights
+into on a build.
+
+To use ``sphinx-build``, install the Sphinx and blurb packages from PyPI.
 
 Then, from the ``Doc`` directory, run::
 
