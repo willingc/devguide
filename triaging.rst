@@ -25,7 +25,7 @@ The major elements found in an issue report include:
 
 Title
 '''''
-A brief description of the issue. Review whether the title is too generic or
+[GH - Issue Title] A brief description of the issue. Review whether the title is too generic or
 specifies an incorrect term or library.
 
 (Optional) Add a prefix at the start of the title to indicate the module, e.g.
@@ -33,21 +33,21 @@ IDLE, doc, or asyncio.
 
 Type
 ''''
-Describes the type of issue.  If an issue does not fit within any
+[GH Label prefix: ``type-``] Describes the type of issue.  If an issue does not fit within any
 specific type, please do not set a type.
 
 +----------------+----------------------------------------------------------+
 |      Type      |                       Description                        |
 +================+==========================================================+
-| behavior       | Unexpected behavior, result, or exception.  Most bugs    |
+| type-behavior       | Unexpected behavior, result, or exception.  Most bugs    |
 |                | will have this type.                                     |
 +----------------+----------------------------------------------------------+
-| compile error  | Errors reported by the compiler while compiling Python.  |
+| type-compile error  | Errors reported by the compiler while compiling Python.  |
 +----------------+----------------------------------------------------------+
-| crash          | Hard crashes of the Python interpreter -- possibly with  |
+| type-crash          | Hard crashes of the Python interpreter -- possibly with  |
 |                | a core dump or a Windows error box.                      |
 +----------------+----------------------------------------------------------+
-| enhancement    | Issues that propose the addition of new functionality,   |
+| type-enhancement    | Issues that propose the addition of new functionality,   |
 |                | such as new functions, classes, modules, or even new     |
 |                | arguments for existing functions. Also used for          |
 |                | improvements in the documentation, test suite and        |
@@ -55,14 +55,14 @@ specific type, please do not set a type.
 |                | prior to filing an issue is `python-ideas`_ mailing      |
 |                | list.                                                    |
 +----------------+----------------------------------------------------------+
-| performance    | Situations where too much time is necessary to complete  |
+| type-performance    | Situations where too much time is necessary to complete  |
 |                | the task. For example, a common task now takes           |
 |                | significantly longer to complete.                        |
 +----------------+----------------------------------------------------------+
-| resource usage | Situations where too many resources (e.g. memory) are    |
+| type-resource usage | Situations where too many resources (e.g. memory) are    |
 |                | used.                                                    |
 +----------------+----------------------------------------------------------+
-| security       | Issues that might have security implications. Report     |
+| type-security       | Issues that might have security implications. Report     |
 |                | security vulnerabilities using the procedure found in    |
 |                | the `Reporting security issues in Python`_ page on the   |
 |                | python.org website.                                      |
@@ -70,36 +70,36 @@ specific type, please do not set a type.
 
 Stage
 '''''
-A needed next action to advance the issue.  The *stage* needn't be set until
+[GH Label prefix: ``stage-``]A needed next action to advance the issue.  The *stage* needn't be set until
 it is clear that the issue has been initially triaged and determined work
 will be needed.
 
 +---------------+----------------------------------------------------------+
 |     Stage     |                       Description                        |
 +===============+==========================================================+
-| test needed   | The steps which are needed to reproduce the issue. The   |
+| stage-test needed   | The steps which are needed to reproduce the issue. The   |
 |               | bug reporter should post a script, instructions, or      |
 |               | example to help someone test or reproduce the issue.     |
 +---------------+----------------------------------------------------------+
-| needs patch   | A patch or pull request is needed to solve the problem   |
+| stage-needs patch   | A patch or pull request is needed to solve the problem   |
 |               | (i.e. fixing the bug or adding the requested             |
 |               | improvement).                                            |
 +---------------+----------------------------------------------------------+
-| patch review  | A patch or pull request exists, but it needs review.     |
+| stage-patch review  | A patch or pull request exists, but it needs review.     |
 |               | Any triager or core developer may do the review.         |
 +---------------+----------------------------------------------------------+
-| commit review | A triager performed a patch review and it looks good.    |
+| stage-commit review | A triager performed a patch review and it looks good.    |
 |               | This signals to core developers the patch or pull        |
 |               | request needs a quick once-over to make sure nothing was |
 |               | overlooked before committing it.                         |
 +---------------+----------------------------------------------------------+
-| resolved      | The issue is considered closed and addressed (e.g. patch |
+| stage-resolved      | The issue is considered closed and addressed (e.g. patch |
 |               | or pull request committed; expected behavior).           |
 +---------------+----------------------------------------------------------+
 
 Components
 ''''''''''
-The area or Python library affected by the issue. This is a multi-select field.
+[GH label prefix: ``area-``] The area or Python library affected by the issue. This is a multi-select field.
 
 Choosing certain components, such as `Documentation`, may cause the issue to
 be auto-assigned, i.e. the issue tracker may automatically fill in the
@@ -110,61 +110,61 @@ One or more components may be selected for an issue:
 +-------------------+------------------------------------------------------+
 |     Component     |                     Description                      |
 +===================+======================================================+
-| 2to3 (*2.x to*    | The 2to3 conversion tool in `Lib/lib2to3`_.          |
+| area-2to3 (*2.x to*    | The 2to3 conversion tool in `Lib/lib2to3`_.          |
 | *3 conversion*    |                                                      |
 | *tool*)           |                                                      |
 +-------------------+------------------------------------------------------+
-| Build             | The build process.                                   |
+| area-Build             | The build process.                                   |
 +-------------------+------------------------------------------------------+
-| ctypes            | The ctypes package in `Lib/ctypes`_.                 |
+| area-ctypes            | The ctypes package in `Lib/ctypes`_.                 |
 +-------------------+------------------------------------------------------+
-| Demos and Tools   | The files in Tools_ and `Tools/demo`_.               |
+| area-Demos and Tools   | The files in Tools_ and `Tools/demo`_.               |
 +-------------------+------------------------------------------------------+
-| Distutils         | The distutils package in `Lib/distutils`_.           |
+| area-Distutils         | The distutils package in `Lib/distutils`_.           |
 +-------------------+------------------------------------------------------+
-| Documentation     | The documentation in Doc_ (source used to build HTML |
+| area-Documentation     | The documentation in Doc_ (source used to build HTML |
 |                   | docs for https://docs.python.org/).                  |
 +-------------------+------------------------------------------------------+
-| email             | The email package and related modules.               |
+| area-email             | The email package and related modules.               |
 +-------------------+------------------------------------------------------+
-| Extension Modules | C modules in Modules_.                               |
+| area-Extension Modules | C modules in Modules_.                               |
 +-------------------+------------------------------------------------------+
-| IDLE              | The `Lib/idlelib`_ package.                          |
+| area-IDLE              | The `Lib/idlelib`_ package.                          |
 +-------------------+------------------------------------------------------+
-| Installation      | The installation process.                            |
+| area-Installation      | The installation process.                            |
 +-------------------+------------------------------------------------------+
-| Interpreter Core  | The interpreter core.                                |
+| area-Interpreter Core  | The interpreter core.                                |
 |                   | The built-in objects in `Objects`_, the `Python`_,   |
 |                   | `Grammar`_ and `Parser`_ dirs.                       |
 +-------------------+------------------------------------------------------+
-| IO                | The I/O system, `Lib/io.py`_ and `Modules/_io`_.     |
+| area-IO                | The I/O system, `Lib/io.py`_ and `Modules/_io`_.     |
 +-------------------+------------------------------------------------------+
-| Library (Lib)     | Python modules in Lib_.                              |
+| area-Library (Lib)     | Python modules in Lib_.                              |
 +-------------------+------------------------------------------------------+
-| Macintosh         | The Mac OS X operating system.                       |
+| area-Macintosh         | The Mac OS X operating system.                       |
 +-------------------+------------------------------------------------------+
-| Regular           | The `Lib/re.py`_ and `Modules/_sre.c`_ modules.      |
+| area-Regular           | The `Lib/re.py`_ and `Modules/_sre.c`_ modules.      |
 | Expressions       |                                                      |
 +-------------------+------------------------------------------------------+
-| Tests             | The unittest framework in `Lib/unittest`_            |
+| area-Tests             | The unittest framework in `Lib/unittest`_            |
 |                   | The doctest framework `Lib/doctest.py`_.             |
 |                   | The CPython tests in `Lib/test`_.                    |
 |                   | The test runner in `Lib/test/regrtest.py`_.          |
 |                   | The test support utilities in `Lib/test/support`_.   |
 +-------------------+------------------------------------------------------+
-| Tkinter           | The `Lib/tkinter`_ package.                          |
+| area-Tkinter           | The `Lib/tkinter`_ package.                          |
 +-------------------+------------------------------------------------------+
-| Unicode           | Unicode, codecs, str vs bytes,                       |
+| area-Unicode           | Unicode, codecs, str vs bytes,                       |
 |                   | `Objects/unicodeobject.c`_.                          |
 +-------------------+------------------------------------------------------+
-| Windows           | The Windows operating system.                        |
+| area-Windows           | The Windows operating system.                        |
 +-------------------+------------------------------------------------------+
-| XML               | The `Lib/xml`_ package.                              |
+| area-XML               | The `Lib/xml`_ package.                              |
 +-------------------+------------------------------------------------------+
 
 Versions
 ''''''''
-The known versions of Python that the issue affects and should be fixed for.
+[GH label prefix: ``version-``]The known versions of Python that the issue affects and should be fixed for.
 
 Thus if an issue for a new feature is assigned for e.g., Python 3.8 but is not
 applied before Python 3.8.0 is released, this field should be updated to say
@@ -172,24 +172,24 @@ Python 3.9 as the version and drop Python 3.8.
 
 Priority
 ''''''''
-What is the severity and urgency?
+[GH label prefix: ``priority-``] What is the severity and urgency?
 
 +------------------+--------------------------------------------------------+
 | Priority         | Description                                            |
 +==================+========================================================+
-| low              | This is for low-impact bugs.                           |
+| priority-low              | This is for low-impact bugs.                           |
 +------------------+--------------------------------------------------------+
-| normal           | The default value for most issues filed.               |
+| priority-normal           | The default value for most issues filed.               |
 +------------------+--------------------------------------------------------+
-| high             | Try to fix the issue before the next final release.    |
+| priority-high             | Try to fix the issue before the next final release.    |
 +------------------+--------------------------------------------------------+
-| critical         | Should definitely be fixed for next final release.     |
+| priority-critical         | Should definitely be fixed for next final release.     |
 +------------------+--------------------------------------------------------+
-| deferred blocker | The issue will not hold up the next release, *n*. It   |
+| priority-deferred blocker | The issue will not hold up the next release, *n*. It   |
 |                  | will be promoted to a *release blocker* for the        |
 |                  | following release, *n+1*.                              |
 +------------------+--------------------------------------------------------+
-| release blocker  | The issue **must** be fixed before *any* release is    |
+| priority-release blocker  | The issue **must** be fixed before *any* release is    |
 |                  | made, e.g., will block the next release even if it is  |
 |                  | an alpha release.                                      |
 +------------------+--------------------------------------------------------+
@@ -204,29 +204,29 @@ manager's name.
 
 Keywords
 ''''''''
-Various informational flags about the issue. Multiple values are possible.
+[GH label prefix: ``info-`` `Various informational flags about the issue. Multiple values are possible.
 
 +---------------+------------------------------------------------------------+
 |    Keyword    |                        Description                         |
 +===============+============================================================+
-| buildbot      | A buildbot triggered the issue being reported.             |
+| info-buildbot      | A buildbot triggered the issue being reported.             |
 +---------------+------------------------------------------------------------+
-| easy          | Fixing the issue should not take longer than a day for     |
+| info-easy          | Fixing the issue should not take longer than a day for     |
 |               | someone new to contributing to Python to solve.            |
 +---------------+------------------------------------------------------------+
-| gsoc          | The issue would fit as, or is related to, a GSoC_ project. |
+| info-gsoc          | The issue would fit as, or is related to, a GSoC_ project. |
 +---------------+------------------------------------------------------------+
-| needs review  | The patch or pull request attached to the issue is in need |
+| info-needs review  | The patch or pull request attached to the issue is in need |
 |               | of a review.                                               |
 +---------------+------------------------------------------------------------+
-| patch         | There is a patch or pull request attached to the issue.    |
+| info-patch         | There is a patch or pull request attached to the issue.    |
 +---------------+------------------------------------------------------------+
-| 3.3regression | The issue is a regression in 3.3.                          |
+| info-3.3regression | The issue is a regression in 3.3.                          |
 +---------------+------------------------------------------------------------+
 
 Nosy List
 '''''''''
-A list of people who may be interested in an issue.
+[Bot to autosubscribe based on criteria] A list of people who may be interested in an issue.
 
 It is acceptable to add someone to the nosy list if you think the issue should
 be brought to their attention. Use the :ref:`experts` to know who wants to be
@@ -244,6 +244,7 @@ username(s) to the nosy once an entry is selected.
 
 Assigned To
 '''''''''''
+[GH issue: Assigned field] [Bots may autoassign module experts if desired]
 Who is expected to take the next step in resolving the issue.
 
 It is acceptable to assign an issue to someone if the issue cannot move
@@ -256,16 +257,17 @@ the :ref:`Developer role <devrole>` on the issue tracker.
 
 Dependencies
 ''''''''''''
-The issue requires the listed issue(s) to be resolved first before it can move
+[GH - Use GitHub ``#issnum`` to reference dependencies via a message] The issue requires the listed issue(s) to be resolved first before it can move
 forward.
 
 Superseder
 ''''''''''
+[GH - Use preferred existing GitHub ``#issnum`` in closing message and close the current issue being triaged]
 The issue is a duplicate of the listed issue(s).
 
 Status
 ''''''
-
+[GH label prefix: ``status-``] [Refactor after migration as this may no longer be needed]
 +---------------+------------------------------------------------------------+
 |    Status     |                        Description                         |
 +===============+============================================================+
@@ -288,42 +290,45 @@ Status
 
 Resolution
 ''''''''''
+[GH label prefix: ``resolution-``] [Refactor after migration as this may no longer be needed]
+
 Why the issue is in its current state. This is not usually used for issues
 with the "open" status.
 
 +---------------+------------------------------------------------------------+
 |  Resolution   |                        Description                         |
 +===============+============================================================+
-| open          | Issue is not resolved.                                     |
+| resolution-open          | Issue is not resolved.                                     |
 +---------------+------------------------------------------------------------+
-| duplicate     | Duplicate of another issue; should have the *Superseder*   |
+| resolution-duplicate     | Duplicate of another issue; should have the *Superseder*   |
 |               | field filled out.                                          |
 +---------------+------------------------------------------------------------+
-| fixed         | A fix for the issue was committed.                         |
+| resolution-fixed         | A fix for the issue was committed.                         |
 +---------------+------------------------------------------------------------+
-| later         | Issue is to be worked on in a later release cycle.         |
+| resolution-later         | Issue is to be worked on in a later release cycle.         |
 +---------------+------------------------------------------------------------+
-| not a bug     | For some reason the issue is invalid (e.g. the perceived   |
+| resolution-not a bug     | For some reason the issue is invalid (e.g. the perceived   |
 |               | problem is not a bug in Python).                           |
 +---------------+------------------------------------------------------------+
-| out of date   | The issue has already been fixed, or the problem doesn't   |
+| resolution-out of date   | The issue has already been fixed, or the problem doesn't   |
 |               | exist anymore for other reasons.                           |
 +---------------+------------------------------------------------------------+
-| postponed     | Issue will not be worked on at the moment but in a future  |
+| resolution-postponed     | Issue will not be worked on at the moment but in a future  |
 |               | minor release version.                                     |
 +---------------+------------------------------------------------------------+
-| rejected      | Issue was rejected (especially for feature requests).      |
+| resolution-rejected      | Issue was rejected (especially for feature requests).      |
 +---------------+------------------------------------------------------------+
-| remind        | The issue is acting as a reminder for someone.             |
+| resolution-remind        | The issue is acting as a reminder for someone.             |
 +---------------+------------------------------------------------------------+
-| wont fix      | Issue will not be fixed, typically because it would cause  |
+| resolution-wont fix      | Issue will not be fixed, typically because it would cause  |
 |               | a backwards-compatibility problem.                         |
 +---------------+------------------------------------------------------------+
-| works for me  | Bug cannot be reproduced.                                  |
+| resolution-works for me  | Bug cannot be reproduced.                                  |
 +---------------+------------------------------------------------------------+
 
 Mercurial Repository
 ''''''''''''''''''''
+[Deprecate this section]
 HTTP link to a Mercurial repository that contains a patch for the issue.
 A :guilabel:`Create Patch` button will appear that computes a diff for the
 head revision of the remote branch and attaches it to the issue.  The button
