@@ -9,7 +9,10 @@ extensions = [
     'sphinx_inline_tabs',
     'sphinxext.opengraph',
     'sphinxext.rediraffe',
+    'sphinx_design',
+    'myst_parser'
 ]
+myst_enable_extensions = ["colon_fence"]
 
 # The master toctree document.
 master_doc = 'index'
